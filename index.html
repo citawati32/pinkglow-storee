@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>PinkGlow Store</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>💖 PinkGlow Store</h1>
+  <input type="text" id="searchInput" placeholder="Cari produk...">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Produk</a>
+    <a href="#about">Tentang</a>
+    <a href="#contact">Kontak</a>
+    <a href="#cart">🛒 Keranjang (<span id="cartCount">0</span>)</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h2>Beauty & Skincare Terbaik</h2>
+  <p>Diskon hingga 50% hari ini!</p>
+</section>
+
+<section class="filter">
+  <button onclick="filterCategory('all')">Semua</button>
+  <button onclick="filterCategory('skincare')">Skincare</button>
+  <button onclick="filterCategory('makeup')">Makeup</button>
+</section>
+
+<section id="products" class="product-grid"></section>
+
+<section id="cart" class="cart">
+  <h2>Keranjang Belanja</h2>
+  <div id="cartItems"></div>
+  <h3>Total: Rp <span id="totalPrice">0</span></h3>
+  <button onclick="showCheckout()">Checkout</button>
+</section>
+
+<section id="checkout" class="checkout">
+  <h2>Checkout</h2>
+  <input type="text" id="name" placeholder="Nama">
+  <input type="text" id="address" placeholder="Alamat">
+  <input type="email" id="email" placeholder="Email">
+  <input type="text" id="phone" placeholder="No HP">
+  <button onclick="confirmOrder()">Konfirmasi Pembelian</button>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
